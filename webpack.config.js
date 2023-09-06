@@ -17,6 +17,26 @@ module.exports = {
         clean: true // build 시 기존 폴더 삭제.
     },
 
+    module: {
+        rules: [
+            {
+                test: /\.s?css$/, // .scss 혹은 .css 확장자로 끝나는 파일들을 test 속성에 매칭.
+                use: [
+                    'style-loader', // html의 style 태그에 css 해석된 코드 삽입.
+                    'css-loader', // css 해석.
+                    'postcss-loader',
+                    'sass-loader'
+                ]
+            },
+            { // babel 패키지들을 webpack이 해설해 줄 수 있도록 babel-loader 라이브러리 추가.
+                test: /\.js$/,
+                use: [
+                    'babel-loader'
+                ]
+            }
+        ]
+    },
+
     plugins: [
         new HtmlPlugin({
             template: './index.html' // output에 명시된 main.js와 index.html을 병합해 줌.
