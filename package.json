@@ -1,0 +1,20 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "dependencies": {},
+  "main": "hello.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.0.0-rc.1"
+  }
+}
