@@ -1,6 +1,7 @@
 // import
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 // export
 module.exports = {
@@ -19,6 +20,13 @@ module.exports = {
     plugins: [
         new HtmlPlugin({
             template: './index.html' // output에 명시된 main.js와 index.html을 병합해 줌.
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: 'static'
+                }
+            ]
         })
     ],
 

@@ -1,7 +1,9 @@
 {
   "name": "webpack-template",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "copy-webpack-plugin": "^8.1.1"
+  },
   "main": "hello.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development",
